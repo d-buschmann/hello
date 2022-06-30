@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <style>
+            body{
+                background-color: rgb(32, 33, 36);
+            }
+            #navigation{
+                margin-bottom: 200px;
+                display: block;
+                border-bottom: 1px solid grey;
+                height: 40px;
+                font-family: arial, sans-serif;
+                font-size: 20px;
+            }
+
+            ul > li{
+                display: inline-block;
+                margin-right: 20px;
+                float: right;
+            }
+
+            ul a {
+                border: none;
+                text-decoration: none;
+                color: #bdc1c6;
+            }
+            
+            form{
+                width: 30%;
+                margin-left: 35%;
+            }
+
+            input{
+                display: block;
+                margin: 5px 0px;
+                padding: 7px 1%;
+                border: 1px solid #474747;
+            }
+            .text{
+                width: 100%;
+                border-radius: 15px;
+            }
+            .submit{
+                width: 35%;
+                float: left;
+                margin-left: 12.5%;
+                border-radius: 5px;
+            }
+            #submit2{
+                margin-left: 5%;
+            }
+            .hidden{
+                display: none;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <navigation id="navigation">
+            <ul>
+                <li><a href="advanced.html">Advanced Search</a></li>
+                <li><a href="image.html">Image Search</a></li>
+            </ul>
+        </navigation>
+        <form action="https://www.google.com/search">
+            <input id="text1" type="text" name="q" class="text">
+            <input id="text2" type="text" name="btnI" class="hidden text">
+            <div>
+                <input id="submit1" class="submit" type="submit" value="Google Search">
+                <input id="submit2" class="submit" type="submit" value="I’m Feeling Lucky">
+            </div>
+        </form> 
+        <div>
+            <div>
+                <p>TEST</p>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('submit1').onclick = function() {
+               document.getElementById('text2').disabled= true;;
+            };
+        </script>
+
+    </body>
+</html>
